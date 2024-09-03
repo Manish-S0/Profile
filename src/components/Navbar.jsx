@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import pic from "../../public/photo.avif";
 import { AiOutlineMenu } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
@@ -29,18 +29,15 @@ function Navbar() {
   ];
   return (
     <>
-      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-white">
+      <div className="max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 left-0 right-0 z-50 bg-black">
         <div className="flex justify-between items-center h-16">
           <div className=" flex space-x-2">
             <img src={pic} className="h-12 w-12 rounded-full" alt="" />
-            <h1 className="font-semibold text-xl cursor-pointer">
-              Akhi<span className="text-green-500 text-2xl">l</span>
-              <p className="text-sm">Web Developer</p>
-            </h1>
+            
           </div>
           {/* desktop navbar */}
           <div>
-            <ul className="hidden md:flex space-x-8">
+            <ul className="hidden lg:flex space-x-8 text-white">
               {navItems.map(({ id, text }) => (
                 <li
                   className="hover:scale-105 duration-200 cursor-pointer"
@@ -58,15 +55,15 @@ function Navbar() {
                 </li>
               ))}
             </ul>
-            <div onClick={() => setMenu(!menu)} className="md:hidden">
+            <div onClick={() => setMenu(!menu)} className="lg:hidden">
               {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
             </div>
           </div>
         </div>
         {/* mobile navbar */}
         {menu && (
-          <div className="bg-white">
-            <ul className="md:hidden flex flex-col h-screen items-center justify-center space-y-3 text-xl">
+          <div className="bg-black w-full py-[20px]">
+            <ul className="lg:hidden flex flex-col h-1/2 items-start  space-y-5 ">
               {navItems.map(({ id, text }) => (
                 <li
                   className="hover:scale-105 duration-200 font-semibold cursor-pointer"
