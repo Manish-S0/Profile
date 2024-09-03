@@ -18,7 +18,7 @@ function Home() {
   return (
     <>
       <div
-        name="Home"
+        
         className="max-w-screen-2xl container mx-auto px-4 md:px-20 my-28"
       >
         <div className="flex flex-col md:flex-row">
@@ -36,13 +36,7 @@ function Home() {
               />
             </div>
             <br />
-            <p className="text-sm md:text-md text-justify">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Quisquam, recusandae consequatur. Accusamus sint libero eligendi
-              laborum fuga repudiandae? Asperiores tempore eos animi dolores
-              corrupti! Sint quos, mollitia architecto aliquam nesciunt, optio
-              cum delectus sit voluptatum aut ratione quaerat veniam aperiam!
-            </p>
+            
             <br />
             {/* social media icons */}
             <div className="flex flex-col items-center md:flex-row justify-between space-y-6 md:space-y-0">
@@ -82,13 +76,7 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 md:ml-48 md:mt-20 mt-8 order-1">
-            <img
-              src={pic}
-              className="rounded-full md:w-[450px] md:h-[450px]"
-              alt=""
-            />
-          </div>
+          
         </div>
       </div>
 
